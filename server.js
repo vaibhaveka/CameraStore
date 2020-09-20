@@ -8,5 +8,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('cors')());
 app.use(require('helmet')());
 app.use('/api/login', require('./controller/login'));
+app.use('/api/product',require('./controller/product'));
 require('./config/db');
 app.listen(5001, () => console.log(`App running on port 5001`));
